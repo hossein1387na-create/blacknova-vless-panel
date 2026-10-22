@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080704">
+<title>BLACK NOVA VPN</title>
+
+<style>
+*{box-sizing:border-box}
+:root{
+  --gold:#ffca55;
+  --gold2:#a96b13;
+  --bg:#080704;
+  --card:#13100b;
+  --text:#fff1cc;
+  --muted:#b7a780;
+}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse at top,#33200a 0%,transparent 48%),
+    var(--bg);
+  color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;
+  min-height:100vh;
+}
+header{
+  text-align:center;
+  padding:28px 16px 20px;
+  border-bottom:1px solid #6d4a18;
+}
+.logo{
+  width:88px;height:88px;
+  margin:auto;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  box-shadow:0 0 25px #d8912955,inset 0 0 18px #d8912922;
+  font-size:57px;font-weight:900;
+  color:var(--gold);
+  text-shadow:0 0 16px #ffb52e;
+}
+h1{
+  font-size:27px;
+  letter-spacing:2px;
+  color:var(--gold);
+  margin:16px 0 8px;
+  text-shadow:0 0 15px #c88b2455;
+}
+.subtitle{font-size:12px;color:var(--muted)}
+.container{max-width:520px;margin:auto;padding:18px 15px}
+.banner{
+  border:1px solid #9b6b27;
+  border-radius:16px;
+  padding:20px 14px;
+  text-align:center;
+  background:linear-gradient(145deg,#211606,#0b0906);
+  box-shadow:0 8px 28px #0008;
+}
+.banner .crown{font-size:30px}
+.banner h2{color:var(--gold);font-size:20px;margin:8px 0}
+.banner p{font-size:12px;line-height:2;color:var(--muted)}
+.card{
+  background:linear-gradient(145deg,#19140c,#0e0c08);
+  border:1px solid #60451e;
+  border-radius:15px;
+  padding:17px;
+  margin-top:17px;
+}
+.card h3{font-size:16px;color:var(--gold);margin:0 0 17px}
+label{display:block;font-size:12px;color:#ddc99d;margin:13px 0 8px}
+input,select,textarea{
+  width:100%;padding:13px;
+  background:#080705;color:#fff0c7;
+  border:1px solid #584322;
+  border-radius:9px;
+  font-size:13px;outline:none;
+}
+input:focus,textarea:focus{border-color:var(--gold)}
+button{
+  border:0;border-radius:9px;padding:13px;
+  font-size:14px;font-weight:bold;cursor:pointer;
+}
+.primary{
+  width:100%;margin-top:17px;
+  color:#171006;
+  background:linear-gradient(100deg,#a86b16,#ffdc7b,#c88a28);
+}
+.secondary{
+  background:#2a2112;color:var(--gold);
+  border:1px solid #74501c;
+}
+.actions{display:flex;gap:9px;margin-top:12px}
+.actions button{flex:1}
+#result{
+  width:100%;min-height:110px;resize:vertical;
+  direction:ltr;text-align:left;overflow-wrap:anywhere;
+}
+.note{
+  color:#b8a77e;font-size:11px;line-height:2;
+  margin-top:12px;
+}
+.status{
+  display:inline-block;border:1px solid #806020;
+  color:var(--gold);border-radius:20px;
+  padding:6px 12px;font-size:11px;
+}
+footer{
+  text-align:center;padding:24px 10px;
+  color:#8c7854;font-size:11px;line-height:2;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">B</div>
+  <h1>BLACK NOVA VPN</h1>
+  <div class="subtitle">SECURE CONNECTION • GOLD EDITION</div>
+</header>
+
+<main class="container">
+
+  <section class="banner">
+    <div class="crown">♛</div>
+    <h2>پنل اختصاصی بلک نوا</h2>
+    <p>
+      مدیریت اطلاعات اتصال VLESS<br>
+      محیط اختصاصی با طراحی مشکی و طلایی
+    </p>
+    <span class="status">VLESS CONFIGURATION</span>
+  </section>
+
+  <section class="card">
+    <h3>✦ ساخت لینک VLESS</h3>
+
+    <label for="address">آدرس سرور یا دامنه</label>
+    <input id="address" placeholder="example.com" dir="ltr">
+
+    <label for="port">پورت سرور</label>
+    <input id="port" type="number" placeholder="443" value="443" dir="ltr">
+
+    <label for="uuid">UUID معتبر سرور</label>
+    <input id="uuid" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" dir="ltr">
+
+    <label for="security">نوع امنیت</label>
+    <select id="security">
+      <option value="tls">TLS</option>
+      <option value="none">None</option>
+    </select>
+
+    <label for="transport">نوع انتقال</label>
+    <select id="transport">
+      <option value="ws">WebSocket (ws)</option>
+      <option value="tcp">TCP</option>
+      <option value="grpc">gRPC</option>
+    </select>
+
+    <label for="sni">دامنه SNI (در صورت نیاز)</label>
+    <input id="sni" placeholder="example.com" dir="ltr">
+
+    <label for="path">مسیر WebSocket (در صورت نیاز)</label>
+    <input id="path" placeholder="/vless" value="/vless" dir="ltr">
+
+    <label for="remark">نام کانفیگ</label>
+    <input id="remark" value="BLACK NOVA" dir="auto">
+
+    <button class="primary" onclick="generate()">ساخت لینک VLESS</button>
+  </section>
+
+  <section class="card">
+    <h3>✦ خروجی کانفیگ</h3>
+    <textarea id="result" readonly
+      placeholder="لینک تولیدشده اینجا نمایش داده می‌شود..."></textarea>
+
+    <div class="actions">
+      <button class="secondary" onclick="copyResult()">کپی لینک</button>
+      <button class="secondary" onclick="clearResult()">پاک کردن</button>
+    </div>
+
+    <p class="note">
+      این پنل لینک را از اطلاعات واردشده تولید می‌کند.
+      اتصال واقعی فقط زمانی کار می‌کند که اطلاعات با تنظیمات
+      سرور VLESS مطابقت داشته باشند.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  BLACK NOVA VPN<br>
+  INDEPENDENT PROJECT
+</footer>
+
+<script>
+function generate(){
+  const address=document.getElementById('address').value.trim();
+  const port=document.getElementById('port').value.trim();
+  const uuid=document.getElementById('uuid').value.trim();
+  const security=document.getElementById('security').value;
+  const transport=document.getElementById('transport').value;
+  const sni=document.getElementById('sni').value.trim();
+  const path=document.getElementById('path').value.trim();
+  const remark=document.getElementById('remark').value.trim();
+
+  const validUUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+  if(!address||!port||!uuid){
+    alert('آدرس سرور، پورت و UUID را وارد کن.');
+    return;
+  }
+
+  if(!/^[a-zA-Z0-9.-]+$/.test(address)){
+    alert('آدرس سرور معتبر نیست.');
+    return;
+  }
+
+  if(!/^\d+$/.test(port)||Number(port)<1||Number(port)>65535){
+    alert('پورت معتبر نیست.');
+    return;
+  }
+
+  if(!validUUID.test(uuid)){
+    alert('UUID معتبر وارد کن.');
+    return;
+  }
+
+  const params=new URLSearchParams();
+  params.set('encryption','none');
+  params.set('type',transport);
+  params.set('security',security);
+
+  if(security==='tls'){
+    params.set('sni',sni||address);
+  }
+
+  if(transport==='ws'){
+    params.set('path',path||'/');
+  }
+
+  const name=encodeURIComponent(remark||'BLACK NOVA');
+  const link=`vless://${uuid}@${address}:${port}?${params.toString()}#${name}`;
+
+  document.getElementById('result').value=link;
+}
+
+async function copyResult(){
+  const field=document.getElementById('result');
+  if(!field.value){
+    alert('ابتدا لینک را تولید کن.');
+    return;
+  }
+  try{
+    await navigator.clipboard.writeText(field.value);
+  }catch(e){
+    field.select();
+    document.execCommand('copy');
+  }
+  alert('لینک کپی شد.');
+}
+
+function clearResult(){
+  document.getElementById('result').value='';
+}
+</script>
+
+</body>
+</html>
